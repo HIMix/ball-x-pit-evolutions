@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ball x Pit — Evolutions Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <h1 class="site-title">Ball x Pit</h1>
+        <p class="site-subtitle">Interactive recipes for evolutions</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Section 1: Selected Blueprint -->
+      <section id="blueprint" class="section">
+        <h2 class="section-title">Selected Blueprint</h2>
+
+        <div id="selected" class="selected">
+          <div class="selected-main">
+            <div class="selected-icon-wrap">
+              <img id="selected-icon" class="selected-icon" alt="Selected icon" src="icons/no_icon.png" />
+            </div>
+            <div class="selected-info">
+              <h3 id="selected-name" class="selected-name">—</h3>
+              <span id="selected-type" class="pill">—</span>
+              <p id="selected-desc" class="selected-desc">???</p>
+            </div>
+          </div>
+
+          <div class="selected-lists">
+            <div class="selected-list">
+              <h4>Used as Ingredient</h4>
+              <div id="used-as-ingredient" class="recipes"></div>
+            </div>
+            <div class="selected-list">
+              <h4>Creates This Weapon</h4>
+              <div id="creates-this" class="recipes"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Base -->
+      <section id="base" class="section">
+        <h2 class="section-title">Base</h2>
+        <div id="base-grid" class="card-grid"></div>
+      </section>
+
+      <!-- Section 3: Evolutions -->
+      <section id="evolutions" class="section">
+        <h2 class="section-title">Evolutions</h2>
+        <div id="evolutions-grid" class="card-grid"></div>
+      </section>
+
+      <!-- Section 4: Advanced Evolutions -->
+      <section id="advanced" class="section">
+        <h2 class="section-title">Advanced Evolutions</h2>
+        <div id="advanced-grid" class="card-grid"></div>
+      </section>
+
+      <!-- Section 5: Passives -->
+      <section id="passives" class="section">
+        <h2 class="section-title">Passives</h2>
+        <div id="passives-grid" class="card-grid"></div>
+      </section>
+    </main>
+
+    <!-- Info block -->
+    <section class="info-box container" aria-label="Information">
+      <p class="info-text">
+        Data is compiled from public sources and my own in‑game screenshots. The dataset is a work in progress, so some entries may be missing. Unavailable icons fall back to <code>no_icon.png</code>, missing descriptions display <code>???</code>.
+      </p>
+    </section>
+
+    <!-- Real footer -->
+    <footer class="page-footer" role="contentinfo">
+      <div class="container page-footer-inner">
+        <p class="made-by">Made by <span class="brand">HIMixoid</span></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
