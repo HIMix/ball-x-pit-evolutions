@@ -71,7 +71,7 @@ const ICONS = {
   'Incubus': 'no_icon.png',
   'Succubus': 'no_icon.png',
   'Lovestruck': 'no_icon.png',
-  'Voluptuous Egg Sac': 'no_icon.png',
+  'Voluptuous Egg Sac': 'voluptuous_egg_sac.png',
   'Satan': 'no_icon.png',
   'Nosferatu': 'no_icon.png',
   // Passive items and results (placeholders)
@@ -129,7 +129,7 @@ const ALL_RECIPES_RAW = [
   // Cell tree
   { result: 'Overgrowth', ingredients: ['Cell', 'Earthquake'] },
   { result: 'Radiation Beam', ingredients: ['Cell', LASER_ANY] },
-  { result: 'Voluptuous Egg Sac', ingredients: ['Cell', 'Maggot'] }, // advanced
+  { result: 'Voluptuous Egg Sac', ingredients: ['Cell', 'Egg Sack'] },
   { result: 'Virus', ingredients: ['Cell', 'Poison'] },
 
   // Charm tree
@@ -297,6 +297,7 @@ const DESCRIPTIONS = {
   'Vampire': 'Each hit has a 4.5% chance of healing 1 health.',
   'Vampire Lord': 'Each hit inflicts 3 stacks of bleed. Heals 1 health and consumes all stacks when hitting an enemy with at least 10 stacks of bleed.',
   'Virus': 'Applies 1 stack of disease to units it hits (max 8 stacks). Disease lasts for 6 seconds. Each stack of disease deals 3-6 damage per second and diseased units have a 15% chance of passing a stack to undiseased nearby enemies each second.',
+  'Voluptuous Egg Sac': 'Explodes into 2-3 egg sacs on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
   'Wind': 'Passes through enemies and slows them down by 30% for 5 seconds, but deals 25% less damage.',
   'Wraith': 'Freezes any enemy it passes through for 0.8 seconds.',
 };
