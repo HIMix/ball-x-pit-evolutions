@@ -6,6 +6,7 @@
   --muted: #9aa7b7;
   --accent: #5cc8ff;
   --accent-2: #9b8cff;
+  --accent-3: #5cc9ffa4;
   --danger: #ff7b7b;
   --success: #5fffaf;
   --border: #223042;
@@ -172,7 +173,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
 }
-.tile-card:hover { transform: translateY(-1px); border-color: var(--accent); box-shadow: 0 6px 15px var(--shadow); }
+.tile-card:hover { transform: translateY(-1px); border-color: var(--accent-3); box-shadow: 0 6px 15px var(--shadow); }
 
 .tile-icon-wrap {
   width: 72px; height: 72px;
