@@ -4,54 +4,61 @@
 // --- Data: Base weapons ---
 const BASE_ITEMS = [
   'Bleed', 'Brood Mother', 'Burn', 'Cell', 'Charm', 'Dark', 'Earthquake', 'Egg Sack',
-  'Freeze', 'Ghost', 'Iron', 'Laser (Horizontal)', 'Laser (Vertical)', 'Light', 'Lightning',
+  'Freeze', 'Ghost', 'Iron', 'Laser (H)', 'Laser (V)', 'Light', 'Lightning',
   'Poison', 'Vampire', 'Wind'
 ];
 
 // Pseudo group for any laser variant
-const LASER_ANY = 'Laser (H or V)';
+const LASER_ANY = 'Laser (Any)';
 
-// --- Icons mapping ---
+// --- Icons mapping (hard-coded, grouped and alphabetized) ---
 const ICONS = {
-  'Assassin': 'assassin.png',
-  'Black Hole': 'black_hole.png',
+  // Base
   'Bleed': 'bleed.png',
-  'Blizzard': 'blizzard.png',
-  'Bomb': 'bomb.png',
   'Brood Mother': 'brood_mother.png',
   'Burn': 'burn.png',
   'Cell': 'cell.png',
+  'Charm': 'no_icon.png',
   'Dark': 'dark.png',
   'Earthquake': 'earthquake.png',
   'Egg Sack': 'egg_sac.png',
+  'Freeze': 'freeze.png',
+  'Ghost': 'ghost.png',
+  'Iron': 'iron.png',
+  [LASER_ANY]: 'laser_h.png',
+  'Laser (H)': 'laser_h.png',
+  'Laser (V)': 'laser_v.png',
+  'Light': 'light.png',
+  'Lightning': 'lightning.png',
+  'Poison': 'poison.png',
+  'Vampire': 'vampire.png',
+  'Wind': 'wind.png',
+
+  // Evolutions
+  'Assassin': 'assassin.png',
+  'Berserk': 'no_icon.png',
+  'Blizzard': 'blizzard.png',
+  'Bomb': 'bomb.png',
   'Flash': 'flash.png',
   'Flicker': 'flicker.png',
-  'Freeze': 'freeze.png',
   'Freeze Ray': 'freeze_ray.png',
   'Frozen Flame': 'frozen_flame.png',
-  'Ghost': 'ghost.png',
   'Glacier': 'glacier.png',
   'Hemorrhage': 'hemorrhage.png',
   'Holy Laser': 'holy_laser.png',
+  'Incubus': 'no_icon.png',
   'Inferno': 'inferno.png',
-  'Iron': 'iron.png',
   'Laser Beam': 'laser_beam.png',
-  'Laser (Horizontal)': 'laser_h.png',
-  'Laser (Vertical)': 'laser_v.png',
-  [LASER_ANY]: 'laser_h.png',
   'Leech': 'leech.png',
-  'Light': 'light.png',
-  'Lightning': 'lightning.png',
   'Lightning Rod': 'lightning_rod.png',
+  'Lovestruck': 'no_icon.png',
   'Maggot': 'maggot.png',
   'Magma': 'magma.png',
   'Mosquito King': 'mosquito_king.png',
   'Mosquito Swarm': 'mosquito_swarm.png',
   'Noxious': 'noxious.png',
-  'Nuclear Bomb': 'nuclear_bomb.png',
   'Overgrowth': 'overgrowth.png',
   'Phantom': 'phantom.png',
-  'Poison': 'poison.png',
   'Radiation Beam': 'radiation_beam.png',
   'Sacrifice': 'sacrifice.png',
   'Sandstorm': 'sandstorm.png',
@@ -61,46 +68,143 @@ const ICONS = {
   'Storm': 'storm.png',
   'Sun': 'sun.png',
   'Swamp': 'swamp.png',
-  'Vampire': 'vampire.png',
+  'Succubus': 'no_icon.png',
   'Vampire Lord': 'vampire_lord.png',
   'Virus': 'virus.png',
-  'Wind': 'wind.png',
-  'Wraith': 'wraith.png',
-  // Missing icons fallback
-  'Berserk': 'no_icon.png',
-  'Incubus': 'no_icon.png',
-  'Succubus': 'no_icon.png',
-  'Lovestruck': 'no_icon.png',
   'Voluptuous Egg Sac': 'voluptuous_egg_sac.png',
-  'Satan': 'no_icon.png',
+  'Wraith': 'wraith.png',
+
+  // Complex
+  'Black Hole': 'black_hole.png',
   'Nosferatu': 'nosferatu.png',
-  // Passive items and results (placeholders)
-  "Diamond HD": 'diamond_hd.png',
-  "Sapphire HD": 'sapphire_hd.png',
-  "Ruby HD": 'ruby_hd.png',
-  "Emerald HD": 'emerald_hd.png',
-  "Baby Rattle": 'baby_rattle.png',
-  "War Horn": 'war_horn.png',
-  "Breastplate": 'breastplate.png',
-  "Wretched Onion": 'wretched_onion.png',
-  "Reacher's Spear": 'reachers_spear.png',
+  'Nuclear Bomb': 'nuclear_bomb.png',
+  'Satan': 'no_icon.png',
+
+  // Passives
+  'Baby Rattle': 'baby_rattle.png',
+  'Breastplate': 'breastplate.png',
+  'Cornucopia': 'cornucopia.png',
+  'Crown of Thorns': 'crown_of_thorns.png',
   "Deadeye's Amulet": 'deadeyes_amulet.png',
-  "Ethereal Cloak": 'ethereal_cloak.png',
-  "Ghostly Corset": 'no_icon.png',
-  "Everflowing Goblet": 'everflowing_goblet.png',
-  "Vampiric Sword": 'vampiric_sword.png',
-  "Crown of Thorns": 'crown_of_thorns.png',
-  "Spiked Collar": 'spiked_collar.png',
-  "Fleet Feet": 'fleet_feet.png',
-  "Radiant Feather": 'radiant_feather.png',
   "Deadeye's Cross": 'no_icon.png',
-  "Cornucopia": 'cornucopia.png',
-  "Odiferous Shell": 'odiferous_shell.png',
-  "Gracious Impaler": 'gracious_impaler.png',
-  "Phantom Regalia": 'no_icon.png',
-  "Soul Reaver": 'no_icon.png',
+  'Diamond HD': 'diamond_hd.png',
+  'Emerald HD': 'emerald_hd.png',
+  'Ethereal Cloak': 'ethereal_cloak.png',
+  'Everflowing Goblet': 'everflowing_goblet.png',
+  'Fleet Feet': 'fleet_feet.png',
+  'Ghostly Corset': 'no_icon.png',
+  'Gracious Impaler': 'gracious_impaler.png',
+  'Odiferous Shell': 'odiferous_shell.png',
+  'Phantom Regalia': 'no_icon.png',
+  'Radiant Feather': 'radiant_feather.png',
+  "Reacher's Spear": 'reachers_spear.png',
+  'Ruby HD': 'ruby_hd.png',
+  'Sapphire HD': 'sapphire_hd.png',
+  'Soul Reaver': 'no_icon.png',
+  'Spiked Collar': 'spiked_collar.png',
   "Tormentor's Mask": 'no_icon.png',
-  "Wings of the Anointed": 'no_icon.png',
+  'Vampiric Sword': 'vampiric_sword.png',
+  'War Horn': 'war_horn.png',
+  'Wings of the Anointed': 'no_icon.png',
+  'Wretched Onion': 'wretched_onion.png',
+};
+
+// --- Descriptions mapping (hard-coded and synchronized with ICONS) ---
+const DESCRIPTIONS = {
+  // Base
+  'Bleed': 'Inflicts 2 stacks of bleed. Bleeding enemies receive 1 damage per stack when hit by a ball (Max 8 stacks).',
+  'Brood Mother': 'Has a 25% chance of birthing a baby ball each time it hits an enemy.',
+  'Burn': 'Add 1 stack of burn on hit for 3 seconds (max 3 stacks). Burnt units are dealt 4-8 damage per stack per second.',
+  'Cell': 'Splits into a clone on hit 2 times.',
+  'Charm': '???',
+  'Dark': 'Deals 3.0x damage but destroys itself after hitting an enemy. Has a 3 second cooldown before it can be shot again.',
+  'Earthquake': 'Deals 5-13 damage to nearby units in a 3x3 tile square.',
+  'Egg Sack': 'Explodes into 2-4 baby balls on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
+  'Freeze': 'Has a 4% chance to freeze enemies for 5.0 seconds. Frozen enemies receive 25% more damage.',
+  'Ghost': 'Passes through enemies.',
+  'Iron': 'Deals double damage but moves 40% slower.',
+  'Laser (Any)': 'Deals 9-18 damage to all enemies in the same line (row or column).',
+  'Laser (H)': 'Deals 9-18 damage to all enemies in the same row.',
+  'Laser (V)': 'Deals 9-18 damage to all enemies in the same column.',
+  'Light': 'Blinds enemies on hit for 3 seconds. Blinded units have a hard time detecting you and have a 50% chance of missing when they attack.',
+  'Lightning': 'Deals 1-20 damage to up to 3 nearby enemies.',
+  'Poison': 'Applies 1 stack of poison on hit (max 5 stacks). Poison lasts for 6 seconds and each stack deals 1-4 damage per second.',
+  'Vampire': 'Each hit has a 4.5% chance of healing 1 health.',
+  'Wind': 'Passes through enemies and slows them down by 30% for 5 seconds, but deals 25% less damage.',
+
+  // Evolutions
+  'Assassin': 'Passes through the front of enemies, but not the back. Backstabs deal 30% bonus damage.',
+  'Berserk': '???',
+  'Blizzard': 'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
+  'Bomb': 'Explodes when hitting an enemy, dealing 150-300 damage to nearby enemies. Has a 3 second cooldown before it can be shot again.',
+  'Flash': 'Damage all enemies on screen for 1-3 damage after hitting an enemy and blind them for 2 seconds.',
+  'Flicker': 'Deals 1-7 damage to every enemy on screen every 1.4 seconds.',
+  'Freeze Ray': 'Emits a freeze ray when hitting an enemy, dealing 20-50 to all enemies in its path, with a 10% chance of freezing them for 10.0 seconds.',
+  'Frozen Flame': 'Add 1 stack of frostburn on hit for 20 seconds (max 4 stacks). Frostburnt units are dealt 8-12 damage per stack per second and receive 25% more damage from other sources.',
+  'Glacier': 'Releases glacial spikes over time that deal 15-30 to enemies that touch them and freeze them for 2.0 seconds. This ball and its glacial spikes also deal 6-12 damage to nearby units.',
+  'Hemorrhage': 'Inflicts 3 stacks of bleed. When hitting an enemy with 12 stacks of bleed or more, consumes all stacks of bleed to deal 20% of their current health.',
+  'Holy Laser': 'Deals 24-36 damage to all enemies in the same row and column.',
+  'Incubus': '???',
+  'Inferno': 'Applies 1 stack of burn every second to all enemies within a 2 tile radius. Burn lasts for 6 seconds, dealing 3-7 damage per stack per second.',
+  'Laser Beam': 'Emit a laser beam on hit that deals 30-42 damage and blinds enemies for 8 seconds.',
+  'Leech': 'Attaches up to 1 leech onto enemies it hits, which adds 2 stacks of bleed per second (Max 24 stacks).',
+  'Lightning Rod': 'Plants a lightning rod into enemies it hits. These enemies are struck by lightning every 3.0 seconds, dealing 1-30 damage to up to 8 nearby enemies.',
+  'Lovestruck': '???',
+  'Maggot': 'Infest enemies on hit with maggots. When they die, they explode into 1-2 baby balls.',
+  'Magma': 'Emits lava blobs over time. Enemies who walk into lava blobs are dealt 15-30 damage and gain 1 stack of burn (max 3 stacks). Burn lasts for for 3 seconds, dealing 3-8 damage per stack per second. This ball and its lava blobs also deal 6-12 damage to nearby units.',
+  'Mosquito King': 'Spawns a mosquito each time it hits an enemy. Mosquitos attack a random enemy, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
+  'Mosquito Swarm': 'Explodes into 3-6 mosquitos. Mosquitos attack random enemies, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
+  'Noxious': 'Passes through enemies and applies 3 stacks of poison to nearby enemies within a 2 tile radius. Poison lasts for 4 seconds and each stack deals 1-3 damage per second.',
+  'Overgrowth': 'Applies 1 stack of overgrowth. Upon reaching 3, consume all stacks and deal 150-200 damage to all enemies in a 3x3 tile square.',
+  'Phantom': 'Curse enemies on hit. Cursed enemies are dealt 100-200 damage after being hit 5 times.',
+  'Radiation Beam': 'Emit a radiation beam on hit that deals 24-48 damage and applies 1 stack of radiation (max 5 stacks). Radiation lasts for 15 seconds and cause enemies to receive 10% more damage from all sources per stack.',
+  'Sacrifice': 'Inflicts 4 stacks of bleed (Max 15 stacks) and applies curse to hit enemies. Cursed enemies are dealt 50-100 after being hit 5 times.',
+  'Sandstorm': 'Goes through enemies and is surrounded by a raging storm dealing 10-20 damage per second and blinding nearby enemies for 3 seconds.',
+  'Shotgun': 'Shoots 3-7 iron baby balls after hitting a wall. Iron baby balls move at 200% speed but are destroyed upon hitting anything.',
+  'Soul Sucker': 'Passes through enemies and saps them, with a 30% chance of stealing 1 health and reducing their attack damage by 20%. Lifesteal chance only applies once per enemy.',
+  'Spider Queen': 'Has a 25% chance of birthing an Egg Sac each time it hits an enemy.',
+  'Storm': 'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
+  'Sun': 'Blind all enemies in view and add 1 stack of burn every second (max 5 stacks). Burn lasts for 6 seconds and deals 6-12 damage per stack per second.',
+  'Swamp': 'Leaves behind tar blobs over time. Enemies who walk into tar blobs are dealt 15-30, are slowed by 50% for 7 seconds and gain 1 stack of poison (max 8 stacks). Each stack of poison deals 1-3 damage per second. This ball and its tar blobs also deal 6-12 damage to nearby units.',
+  'Succubus': '???',
+  'Vampire Lord': 'Each hit inflicts 3 stacks of bleed. Heals 1 health and consumes all stacks when hitting an enemy with at least 10 stacks of bleed.',
+  'Virus': 'Applies 1 stack of disease to units it hits (max 8 stacks). Disease lasts for 6 seconds. Each stack of disease deals 3-6 damage per second and diseased units have a 15% chance of passing a stack to undiseased nearby enemies each second.',
+  'Voluptuous Egg Sac': 'Explodes into 2-3 egg sacs on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
+  'Wraith': 'Freezes any enemy it passes through for 0.8 seconds.',
+
+  // Complex
+  'Black Hole': 'Instantly kills the first non-boss enemy that it hits, but destroys itself afterwards. Has a 7 second cooldown before it can be shot again.',
+  'Nosferatu': 'Spawns a vampire bat each bounce. Vampire bats fly towards a random enemy, dealing 132-176 damage on hit, turning into a Vampire Lord.',
+  'Nuclear Bomb': 'Explodes when hitting an enemy, dealing 300-500 damage to nearby enemies and applying 1 stack of radiation to everyone present indefinitely (max 5 stacks). Each stack of radiation increases damage received by 10%. Has a 3 second cooldown.',
+  'Satan': '???',
+
+  // Passives
+  'Baby Rattle': 'Adds 1.5x baby balls, but your aim becomes scattered.',
+  'Breastplate': 'Decrease damage taken by 10%',
+  'Cornucopia': 'Each time baby balls are created, spawn 0-1 additional baby balls.',
+  'Crown of Thorns': 'Destroy the 2 nearest enemies when you are hit from close range.',
+  "Deadeye's Amulet": 'Critical hits deal 10-15 bonus damage.',
+  "Deadeye's Cross": '???',
+  'Diamond HD': 'Increase crit chance to 20% when hitting enemies in the front.',
+  'Emerald HD': 'Increase crit chance to 30% when hitting enemies on their right side.',
+  'Ethereal Cloak': 'Balls go through enemies and deal 25% bonus damage until they hit the back of the field.',
+  'Everflowing Goblet': 'You can heal past your max health at 20% efficiency.',
+  'Fleet Feet': 'Increase movement speed by 10% and move at full speed while shooting.',
+  'Ghostly Corset': '???',
+  'Gracious Impaler': 'Critical hits have a 5% chance to instantly kill enemies.',
+  'Odiferous Shell': 'When you touch enemies, they have 50% chance of instantly dying.',
+  'Phantom Regalia': '???',
+  'Radiant Feather': 'Increase ball launch speed by 20%, but get knocked back a little each time you shoot a ball.',
+  "Reacher's Spear": 'Increase crit chance to 20% when hitting enemies in the same column as you.',
+  'Ruby HD': 'Increase crit chance to 15% when hitting enemies in the back.',
+  'Sapphire HD': 'Increase crit chance to 30% when hitting enemies on their left side.',
+  'Soul Reaver': '???',
+  'Spiked Collar': 'Deal 30-50 to enemied the first time you get into their melee attack range.',
+  "Tormentor's Mask": '???',
+  'Vampiric Sword': 'Each kill heals you by 5, but each shot you take deals 2 damage to you.',
+  'War Horn': 'All baby balls deal 20% more damage.',
+  'Wings of the Anointed': '???',
+  'Wretched Onion': 'Deal 6-12 per second to enemies within 2 tiles.',
 };
 
 // --- Recipes dataset ---
@@ -187,7 +291,7 @@ const ALL_RECIPES_RAW = [
   { result: 'Freeze Ray', ingredients: [LASER_ANY, 'Freeze'] },
   { result: 'Laser Beam', ingredients: [LASER_ANY, 'Light'] },
   { result: 'Radiation Beam', ingredients: [LASER_ANY, 'Poison'] },
-  { result: 'Holy Laser', ingredients: ['Laser (Horizontal)', 'Laser (Vertical)'] },
+  { result: 'Holy Laser', ingredients: ['Laser (H)', 'Laser (V)'] },
 
   // Light tree
   { result: 'Sun', ingredients: ['Light', 'Burn'] },
@@ -244,92 +348,13 @@ const PASSIVE_RECIPES = [
   { result: 'Wings of the Anointed', ingredients: ['Fleet Feet', 'Radiant Feather'], type: 'passive' },
 ];
 
-// --- Descriptions (embedded) ---
-const DESCRIPTIONS = {
-  'Assassin': 'Passes through the front of enemies, but not the back. Backstabs deal 30% bonus damage.',
-  'Black Hole': 'Instantly kills the first non-boss enemy that it hits, but destroys itself afterwards. Has a 7 second cooldown before it can be shot again.',
-  'Bleed': 'Inflicts 2 stacks of bleed. Bleeding enemies receive 1 damage per stack when hit by a ball (Max 8 stacks).',
-  'Blizzard': 'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
-  'Bomb': 'Explodes when hitting an enemy, dealing 150-300 damage to nearby enemies. Has a 3 second cooldown before it can be shot again.',
-  'Brood Mother': 'Has a 25% chance of birthing a baby ball each time it hits an enemy.',
-  'Burn': 'Add 1 stack of burn on hit for 3 seconds (max 3 stacks). Burnt units are dealt 4-8 damage per stack per second.',
-  'Cell': 'Splits into a clone on hit 2 times.',
-  'Dark': 'Deals 3.0x damage but destroys itself after hitting an enemy. Has a 3 second cooldown before it can be shot again.',
-  'Earthquake': 'Deals 5-13 damage to nearby units in a 3x3 tile square.',
-  'Egg Sack': 'Explodes into 2-4 baby balls on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
-  'Flash': 'Damage all enemies on screen for 1-3 damage after hitting an enemy and blind them for 2 seconds.',
-  'Flicker': 'Deals 1-7 damage to every enemy on screen every 1.4 seconds.',
-  'Freeze': 'Has a 4% chance to freeze enemies for 5.0 seconds. Frozen enemies receive 25% more damage.',
-  'Freeze Ray': 'Emits a freeze ray when hitting an enemy, dealing 20-50 to all enemies in its path, with a 10% chance of freezing them for 10.0 seconds.',
-  'Frozen Flame': 'Add 1 stack of frostburn on hit for 20 seconds (max 4 stacks). Frostburnt units are dealt 8-12 damage per stack per second and receive 25% more damage from other sources.',
-  'Ghost': 'Passes through enemies.',
-  'Glacier': 'Releases glacial spikes over time that deal 15-30 to enemies that touch them and freeze them for 2.0 seconds. This ball and its glacial spikes also deal 6-12 damage to nearby units.',
-  'Hemorrhage': 'Inflicts 3 stacks of bleed. When hitting an enemy with 12 stacks of bleed or more, consumes all stacks of bleed to deal 20% of their current health.',
-  'Holy Laser': 'Deals 24-36 damage to all enemies in the same row and column.',
-  'Inferno': 'Applies 1 stack of burn every second to all enemies within a 2 tile radius. Burn lasts for 6 seconds, dealing 3-7 damage per stack per second.',
-  'Iron': 'Deals double damage but moves 40% slower.',
-  'Laser Beam': 'Emit a laser beam on hit that deals 30-42 damage and blinds enemies for 8 seconds.',
-  'Laser (Horizontal)': 'Deals 9-18 damage to all enemies in the same row.',
-  'Laser (Vertical)': 'Deals 9-18 damage to all enemies in the same column.',
-  'Laser (H or V)': 'Deals 9-18 damage to all enemies in the same line.',
-  'Leech': 'Attaches up to 1 leech onto enemies it hits, which adds 2 stacks of bleed per second (Max 24 stacks).',
-  'Light': 'Blinds enemies on hit for 3 seconds. Blinded units have a hard time detecting you and have a 50% chance of missing when they attack.',
-  'Lightning': 'Deals 1-20 damage to up to 3 nearby enemies.',
-  'Lightning Rod': 'Plants a lightning rod into enemies it hits. These enemies are struck by lightning every 3.0 seconds, dealing 1-30 damage to up to 8 nearby enemies.',
-  'Maggot': 'Infest enemies on hit with maggots. When they die, they explode into 1-2 baby balls.',
-  'Magma': 'Emits lava blobs over time. Enemies who walk into lava blobs are dealt 15-30 damage and gain 1 stack of burn (max 3 stacks). Burn lasts for for 3 seconds, dealing 3-8 damage per stack per second. This ball and its lava blobs also deal 6-12 damage to nearby units.',
-  'Mosquito King': 'Spawns a mosquito each time it hits an enemy. Mosquitos attack a random enemy, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
-  'Mosquito Swarm': 'Explodes into 3-6 mosquitos. Mosquitos attack random enemies, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
-  'Nosferatu': 'Spawns a vampire bat each bounce. Vampire bats fly towards a random enemy, dealing 132-176 damage on hit, turning into a Vampire Lord.',
-  'Noxious': 'Passes through enemies and applies 3 stacks of poison to nearby enemies within a 2 tile radius. Poison lasts for 4 seconds and each stack deals 1-3 damage per second.',
-  'Nuclear Bomb': 'Explodes when hitting an enemy, dealing 300-500 damage to nearby enemies and applying 1 stack of radiation to everyone present indefinitely (max 5 stacks). Each stack of radiation increases damage received by 10%. Has a 3 second cooldown.',
-  'Overgrowth': 'Applies 1 stack of overgrowth. Upon reaching 3, consume all stacks and deal 150-200 damage to all enemies in a 3x3 tile square.',
-  'Phantom': 'Curse enemies on hit. Cursed enemies are dealt 100-200 damage after being hit 5 times.',
-  'Poison': 'Applies 1 stack of poison on hit (max 5 stacks). Poison lasts for 6 seconds and each stack deals 1-4 damage per second.',
-  'Radiation Beam': 'Emit a radiation beam on hit that deals 24-48 damage and applies 1 stack of radiation (max 5 stacks). Radiation lasts for 15 seconds and cause enemies to receive 10% more damage from all sources per stack.',
-  'Sacrifice': 'Inflicts 4 stacks of bleed (Max 15 stacks) and applies curse to hit enemies. Cursed enemies are dealt 50-100 after being hit 5 times.',
-  'Sandstorm': 'Goes through enemies and is surrounded by a raging storm dealing 10-20 damage per second and blinding nearby enemies for 3 seconds.',
-  'Shotgun': 'Shoots 3-7 iron baby balls after hitting a wall. Iron baby balls move at 200% speed but are destroyed upon hitting anything.',
-  'Soul Sucker': 'Passes through enemies and saps them, with a 30% chance of stealing 1 health and reducing their attack damage by 20%. Lifesteal chance only applies once per enemy.',
-  'Spider Queen': 'Has a 25% chance of birthing an Egg Sac each time it hits an enemy.',
-  'Storm': 'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
-  'Sun': 'Blind all enemies in view and add 1 stack of burn every second (max 5 stacks). Burn lasts for 6 seconds and deals 6-12 damage per stack per second.',
-  'Swamp': 'Leaves behind tar blobs over time. Enemies who walk into tar blobs are dealt 15-30, are slowed by 50% for 7 seconds and gain 1 stack of poison (max 8 stacks). Each stack of poison deals 1-3 damage per second. This ball and its tar blobs also deal 6-12 damage to nearby units.',
-  'Vampire': 'Each hit has a 4.5% chance of healing 1 health.',
-  'Vampire Lord': 'Each hit inflicts 3 stacks of bleed. Heals 1 health and consumes all stacks when hitting an enemy with at least 10 stacks of bleed.',
-  'Virus': 'Applies 1 stack of disease to units it hits (max 8 stacks). Disease lasts for 6 seconds. Each stack of disease deals 3-6 damage per second and diseased units have a 15% chance of passing a stack to undiseased nearby enemies each second.',
-  'Voluptuous Egg Sac': 'Explodes into 2-3 egg sacs on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
-  'Wind': 'Passes through enemies and slows them down by 30% for 5 seconds, but deals 25% less damage.',
-  'Wraith': 'Freezes any enemy it passes through for 0.8 seconds.',
-  'Baby Rattle': 'Adds 1.5x baby balls, but your aim becomes scattered.',
-  'War Horn': 'All baby balls deal 20% more damage.',
-  'Cornucopia': 'Each time baby balls are created, spawn 0-1 additional baby balls.',
-  'Diamond HD': 'Increase crit chance to 20% when hitting enemies in the front.',
-  'Sapphire HD': 'Increase crit chance to 30% when hitting enemies on their left side.',
-  'Ruby HD': 'Increase crit chance to 15% when hitting enemies in the back.',
-  'Emerald HD': 'Increase crit chance to 30% when hitting enemies on their right side.',
-  "Reacher's Spear": 'Increase crit chance to 20% when hitting enemies in the same column as you.',
-  "Deadeye's Amulet": 'Critical hits deal 10-15 bonus damage.',
-  'Gracious Impaler': 'Critical hits have a 5% chance to instantly kill enemies.',
-  'Breastplate': 'Decrease damage taken by 10%',
-  'Ethereal Cloak': 'Balls go through enemies and deal 25% bonus damage until they hit the back of the field.',
-  'Everflowing Goblet': 'You can heal past your max health at 20% efficiency.',
-  'Vampiric Sword': 'Each kill heals you by 5, but each shot you take deals 2 damage to you.',
-  'Fleet Feet': 'Increase movement speed by 10% and move at full speed while shooting.',
-  'Radiant Feather': 'Increase ball launch speed by 20%, but get knocked back a little each time you shoot a ball.',
-  'Spiked Collar': 'Deal 30-50 to enemied the first time you get into their melee attack range.',
-  'Wretched Onion': 'Deal 6-12 per second to enemies within 2 tiles.',
-  'Crown of Thorns': 'Destroy the 2 nearest enemies when you are hit from close range.',
-  'Odiferous Shell': 'When you touch enemies, they have 50% chance of instantly dying.',
-};
-
 // --- Catalog building & classification ---
 function isBase(name) {
   return BASE_ITEMS.includes(name);
 }
 
 function isLaserVariant(name) {
-  return name === 'Laser (Horizontal)' || name === 'Laser (Vertical)';
+  return name === 'Laser (H)' || name === 'Laser (V)';
 }
 
 function ingredientMatches(ingredient, selected) {
@@ -425,7 +450,7 @@ function formatDesc(text) {
 function pillLabel(type) {
   if (type === 'base') return 'Base';
   if (type === 'evolution') return 'Evolution';
-  if (type === 'advanced') return 'Advanced Evolution';
+  if (type === 'advanced') return 'Advanced';
   if (type === 'passive') return 'Passive';
   if (type === 'group') return 'Variant Group';
   return '—';
@@ -489,6 +514,31 @@ function makeMiniCard(nameLike) {
   return mc;
 }
 
+// Tile-style weapon mini card for modal recipe cards
+function makeTileCard(nameLike) {
+  const name = nameLike === 'LASER_ANY' ? LASER_ANY : nameLike;
+  const tile = document.createElement('div');
+  tile.className = 'tile-card';
+  tile.dataset.name = name;
+
+  const iconWrap = document.createElement('div');
+  iconWrap.className = 'tile-icon-wrap';
+  const img = document.createElement('img');
+  img.className = 'tile-icon';
+  img.src = iconFor(name);
+  img.alt = `${name} icon`;
+  iconWrap.appendChild(img);
+
+  const nm = document.createElement('div');
+  nm.className = 'tile-name';
+  nm.textContent = name;
+
+  tile.appendChild(iconWrap);
+  tile.appendChild(nm);
+  tile.addEventListener('click', () => selectItem(name));
+  return tile;
+}
+
 function renderRecipeRow(recipe) {
   const row = document.createElement('div');
   row.className = 'recipe-row';
@@ -512,6 +562,36 @@ function renderRecipeRow(recipe) {
 
   row.appendChild(makeMiniCard(recipe.result));
   return row;
+}
+
+// Card-style recipe with ingredient tiles above, arrow, and result tile below
+function renderRecipeCard(recipe) {
+  const card = document.createElement('div');
+  card.className = 'recipe-card';
+
+  const ingGrid = document.createElement('div');
+  ingGrid.className = 'recipe-ing-grid';
+  // Кол-во колонок зависит от числа ингредиентов:
+  // 1→1, 2→2, 3→3, 4→2 (две строки по две), >4→3
+  const len = recipe.ingredients.length;
+  const colCount = (len === 4) ? 2 : Math.min(len, 3);
+  ingGrid.style.gridTemplateColumns = `repeat(${colCount}, 96px)`;
+  recipe.ingredients.forEach((ing) => {
+    const name = isLaserVariant(ing) ? LASER_ANY : ing;
+    ingGrid.appendChild(makeTileCard(name));
+  });
+  card.appendChild(ingGrid);
+
+  const arrow = document.createElement('div');
+  arrow.className = 'arrow-down';
+  arrow.textContent = '↓';
+  card.appendChild(arrow);
+
+  const resultTile = makeTileCard(recipe.result);
+  resultTile.classList.add('result');
+  card.appendChild(resultTile);
+
+  return card;
 }
 
 // --- UI state ---
@@ -545,7 +625,7 @@ function selectItem(name) {
       const key = recipeKey(r);
       if (seenKeys.has(key)) continue;
       seenKeys.add(key);
-      usedWrap.appendChild(renderRecipeRow(r));
+      usedWrap.appendChild(renderRecipeCard(r));
     }
   }
 
@@ -556,7 +636,7 @@ function selectItem(name) {
       const key = recipeKey(r);
       if (seenKeys2.has(key)) continue;
       seenKeys2.add(key);
-      createsWrap.appendChild(renderRecipeRow(r));
+      createsWrap.appendChild(renderRecipeCard(r));
     }
   }
 
