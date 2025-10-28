@@ -73,7 +73,7 @@ const ICONS = {
   'Lovestruck': 'no_icon.png',
   'Voluptuous Egg Sac': 'voluptuous_egg_sac.png',
   'Satan': 'no_icon.png',
-  'Nosferatu': 'no_icon.png',
+  'Nosferatu': 'nosferatu.png',
   // Passive items and results (placeholders)
   "Diamond HD": 'diamond_hd.png',
   "Sapphire HD": 'sapphire_hd.png',
@@ -280,6 +280,7 @@ const DESCRIPTIONS = {
   'Magma': 'Emits lava blobs over time. Enemies who walk into lava blobs are dealt 15-30 damage and gain 1 stack of burn (max 3 stacks). Burn lasts for for 3 seconds, dealing 3-8 damage per stack per second. This ball and its lava blobs also deal 6-12 damage to nearby units.',
   'Mosquito King': 'Spawns a mosquito each time it hits an enemy. Mosquitos attack a random enemy, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
   'Mosquito Swarm': 'Explodes into 3-6 mosquitos. Mosquitos attack random enemies, dealing 80-120 damage each. If a mosquito kills an enemy, they steal 1 health.',
+  'Nosferatu': 'Spawns a vampire bat each bounce. Vampire bats fly towards a random enemy, dealing 132-176 damage on hit, turning into a Vampire Lord.',
   'Noxious': 'Passes through enemies and applies 3 stacks of poison to nearby enemies within a 2 tile radius. Poison lasts for 4 seconds and each stack deals 1-3 damage per second.',
   'Nuclear Bomb': 'Explodes when hitting an enemy, dealing 300-500 damage to nearby enemies and applying 1 stack of radiation to everyone present indefinitely (max 5 stacks). Each stack of radiation increases damage received by 10%. Has a 3 second cooldown.',
   'Overgrowth': 'Applies 1 stack of overgrowth. Upon reaching 3, consume all stacks and deal 150-200 damage to all enemies in a 3x3 tile square.',
