@@ -467,7 +467,7 @@ function makeCard(name, type) {
   card.appendChild(nm);
   card.appendChild(pills);
 
-  card.addEventListener('click', () => selectItem(name));
+  card.addEventListener('click', () => openSelected(name));
   return card;
 }
 
@@ -560,9 +560,39 @@ function selectItem(name) {
     }
   }
 
-  // Smooth scroll to Selected Blueprint section
-  const blueprint = document.getElementById('site-header');
-  if (blueprint) blueprint.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Empty-state placeholders when no recipes are found
+  if (!usedWrap.hasChildNodes()) {
+    const p = document.createElement('p');
+    p.className = 'empty-recipes';
+    p.textContent = 'ℹ️ No recipes here...';
+    usedWrap.appendChild(p);
+  }
+  if (!createsWrap.hasChildNodes()) {
+    const p = document.createElement('p');
+    p.className = 'empty-recipes';
+    p.textContent = 'ℹ️ No recipes here...';
+    createsWrap.appendChild(p);
+  }
+
+  // In modal mode, we do not scroll the page
+}
+
+function openSelected(name) {
+  // Populate content
+  selectItem(name);
+  const overlay = document.getElementById('selected-modal');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  overlay.removeAttribute('hidden');
+  document.body.classList.add('modal-open');
+}
+
+function closeSelected() {
+  const overlay = document.getElementById('selected-modal');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  overlay.setAttribute('hidden', 'hidden');
+  document.body.classList.remove('modal-open');
 }
 
 function renderSections() {
@@ -589,8 +619,20 @@ function renderSections() {
 function init() {
   CATALOG = buildCatalog();
   renderSections();
-  // Default selection
-  selectItem('Bleed');
+  // Modal wiring
+  const overlay = document.getElementById('selected-modal');
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeSelected();
+    });
+  }
+  const closeBtn = document.getElementById('modal-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeSelected());
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSelected();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', init);

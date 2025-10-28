@@ -130,6 +130,17 @@ body {
 .mini-icon { width: 24px; height: 24px; border-radius: 999px; object-fit: contain; }
 .mini-name { font-size: 13px; }
 
+/* Empty state in recipe lists */
+.empty-recipes {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  background: rgba(22, 30, 41, 0.6);
+  color: var(--muted);
+  text-align: center;
+}
+
 .site-footer { margin: 40px auto; color: var(--muted); }
 .site-footer code { color: var(--accent); }
 
@@ -153,6 +164,47 @@ body {
 .page-footer-inner { padding: 18px 0; }
 .made-by { margin: 0; text-align: center; color: var(--muted); }
 .made-by .brand { color: var(--accent); font-weight: 600; letter-spacing: 0.3px; }
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 20, 0.65);
+  backdrop-filter: blur(4px);
+  display: none;
+  z-index: 100;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: flex; }
+.modal-content { width: min(1100px, 92vw); margin: 60px auto; position: relative; }
+body.modal-open { overflow: hidden; }
+
+/* Keep lists stacked vertically inside modal, even on wide screens */
+.modal-overlay .selected-lists { grid-template-columns: 1fr; }
+
+/* Bigger recipe chips inside Selected modal */
+.modal-overlay .selected .recipe-row { gap: 12px; padding: 10px; }
+.modal-overlay .selected .mini-card { grid-template-columns: 32px auto; padding: 8px 10px; }
+.modal-overlay .selected .mini-icon { width: 32px; height: 32px; }
+.modal-overlay .selected .mini-name { font-size: 14px; }
+
+/* Close button in modal */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 22px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.modal-close:hover { background: rgba(255, 255, 255, 0.14); }
 
 /* Responsive tweaks */
 @media (max-width: 640px) {
