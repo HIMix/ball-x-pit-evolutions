@@ -100,7 +100,7 @@ const ICONS = {
   "Reacher's Spear": 'reachers_spear.png',
   'Ruby HD': 'ruby_hd.png',
   'Sapphire HD': 'sapphire_hd.png',
-  'Soul Reaver': 'sould_reaver.png',
+  'Soul Reaver': 'soul_reaver.png',
   'Spiked Collar': 'spiked_collar.png',
   "Tormenters Mask": 'tormenters_mask.png',
   'Vampiric Sword': 'vampiric_sword.png',
