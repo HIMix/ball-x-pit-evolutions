@@ -100,12 +100,12 @@ const ICONS = {
   "Reacher's Spear": 'reachers_spear.png',
   'Ruby HD': 'ruby_hd.png',
   'Sapphire HD': 'sapphire_hd.png',
-  'Soul Reaver': 'no_icon.png',
+  'Soul Reaver': 'sould_reaver.png',
   'Spiked Collar': 'spiked_collar.png',
-  "Tormentor's Mask": 'no_icon.png',
+  "Tormenters Mask": 'tormenters_mask.png',
   'Vampiric Sword': 'vampiric_sword.png',
   'War Horn': 'war_horn.png',
-  'Wings of the Anointed': 'no_icon.png',
+  'Wings of the Anointed': 'wings_of_the_anointed.png',
   'Wretched Onion': 'wretched_onion.png',
 };
 
@@ -198,12 +198,12 @@ const DESCRIPTIONS = {
   "Reacher's Spear": 'Increase crit chance to 20% when hitting enemies in the same column as you.',
   'Ruby HD': 'Increase crit chance to 15% when hitting enemies in the back.',
   'Sapphire HD': 'Increase crit chance to 30% when hitting enemies on their left side.',
-  'Soul Reaver': '???',
+  'Soul Reaver': 'Each kill heals you by 1 and you can heal past your max health at 30% efficiency.',
   'Spiked Collar': 'Deal 30-50 to enemied the first time you get into their melee attack range.',
-  "Tormentor's Mask": '???',
+  "Tormenters Mask": 'Enemies have 10% chance of dying immidiately the first time they detect you.',
   'Vampiric Sword': 'Each kill heals you by 5, but each shot you take deals 2 damage to you.',
   'War Horn': 'All baby balls deal 20% more damage.',
-  'Wings of the Anointed': '???',
+  'Wings of the Anointed': 'Balls move 40% faster and you move 20% faster. You no longer are affected by environmental hazards on the ground.',
   'Wretched Onion': 'Deal 6-12 per second to enemies within 2 tiles.',
 };
 
@@ -344,7 +344,7 @@ const PASSIVE_RECIPES = [
   { result: 'Gracious Impaler', ingredients: ["Reacher's Spear", "Deadeye's Amulet"], type: 'passive' },
   { result: 'Phantom Regalia', ingredients: ['Ethereal Cloak', 'Ghostly Corset'], type: 'passive' },
   { result: 'Soul Reaver', ingredients: ['Everflowing Goblet', 'Vampiric Sword'], type: 'passive' },
-  { result: "Tormentor's Mask", ingredients: ['Crown of Thorns', 'Spiked Collar'], type: 'passive' },
+  { result: "Tormenters Mask", ingredients: ['Crown of Thorns', 'Spiked Collar'], type: 'passive' },
   { result: 'Wings of the Anointed', ingredients: ['Fleet Feet', 'Radiant Feather'], type: 'passive' },
 ];
 
